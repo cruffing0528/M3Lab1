@@ -91,3 +91,38 @@ for (var i = 0; i < movies12.length; i++) {
     });
     console.log("Movie: " + movieNames[0]);
 }
+
+//STEP 14
+var employees = ["Claire Ruffing", "John Doe", "Jane Smith", "Emily Davis", "Michael Brown"];
+const showEmployee = function(employees) {
+    console.log("Employees:\n");
+    for (var i = 0; i < employees.length; i++) {
+        console.log(employees[i] +"\n");
+    }
+}
+showEmployee(employees);
+
+//STEP 15
+function filterValues(array) {
+    return array.filter(function(value) {
+        return value !== false && value !== null && value !== 0 && value !== "";
+    });
+}
+var values = [58, '', 'abcd', true, null, false, 0];
+console.log("Original array: " + JSON.stringify(values));
+console.log("Filtered array: " + JSON.stringify(filterValues(values)));
+
+//STEP 16
+var myArray = [1, 2, 3, 23, 24, 125, 2354, 12, 214, 65];
+function randomItem(array) {
+    var randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+console.log("Random item from the array: " + randomItem(myArray));
+
+//STEP 17
+function getLargestNumber(array) {
+    return Math.max(...array);
+}
+var numbers = [1, 2, 3, 23, 24, 125, 2354, 12, 214, 65];
+console.log("Largest number in the array: " + getLargestNumber(numbers));
